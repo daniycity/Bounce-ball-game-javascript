@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Bouncing Balls</title>
+    <meta name="description" content="Exercise" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Author" content="F, R, A, D" />
+    <!-- Flaticon -->
+    <link rel="shortcut icon" href="img/logo.png" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/normalized.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Fonts-->
+  </head>
+  <body>
+    <div id="menu-hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <canvas id="auxiliaryCanvas"></canvas>
+    <div id="container">
+      <fieldset>
+        <legend align="center">Statistics</legend>
+        <div class="control">
+          <span id="speed-label">Speed</span>
+          <textarea id="text" readonly></textarea>
+        </div>
+
+        <div class="control">
+          <span id="ball-counter-label">Ball counter</span>
+          <textarea id="ballCounter" readonly></textarea>
+        </div>
+
+        <div class="control">
+          <span id="size-counter-label">Size counter</span>
+          <textarea id="sizeCounter" readonly></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend align="center">Settings and controls</legend>
+        <div class="control">
+          <span id="random-color-switch-label">Random Color</span>
+          <label class="switch">
+            <input id="randomColor" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="control">
+          <span id="color-picker-label">Color Picker</span>
+          <input id="selectedColor" type="color" />
+        </div>
+
+        <div class="control">
+          <span id="play-pause-switch-label">Play/Pause</span>
+          <label class="switch">
+            <input id="playAndPause" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="control">
+          <button id="clearStage">Clear stage</button>
+        </div>
+
+        <div class="control">
+          <button id="increaseSizeNewBall">Increase spawn size</button>
+          <img src="img/keyboard.png" alt="" />
+          <span>></span>
+        </div>
+
+        <div class="control">
+          <button id="decreaseSizeNewBall">Decrease spawn size</button>
+          <img src="img/keyboard.png" alt="" />
+          <span><</span>
+        </div>
+
+        <div class="control">
+          <button id="increaseSizeAllBall">Increase all balls size</button>
+          <img src="img/keyboard.png" alt="" />
+          <span>^</span>
+        </div>
+
+        <div class="control">
+          <button id="decreaseSizeAllBall">Decrease all balls size</button>
+          <img src="img/keyboard.png" alt="" />
+          <span>v</span>
+        </div>
+
+        <div class="control">
+          <span id="">All speed +/-</span>
+          <img src="img/keyboard.png" alt="" />
+          <span>W/S</span>
+        </div>
+
+        <div class="control">
+          <span>Gravity</span>
+          <input
+            type="range"
+            min="-1"
+            max="10"
+            value="0.25"
+            id="sliderGravity"
+          />
+        </div>
+
+        <div class="control">
+          <span>Active trail</span>
+          <label class="switch">
+            <input id="activeTrail" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+  </body>
+  <!--End of body-->
+  <script src="js/balls.js"></script>
+  <script src="js/hamburger.js"></script>
+</html>

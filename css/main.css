@@ -1,0 +1,183 @@
+/*
+*@authors
+*/
+@font-face {
+  font-family: "Retro-Gaming";
+  src: url("fonts/Retro-Gaming.ttf.woff") format("woff"),
+    url("fonts/Retro-Gaming.ttf.svg#Retro-Gaming") format("svg"),
+    url("fonts/Retro-Gaming.ttf.eot"),
+    url("fonts/Retro-Gaming.ttf.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*Set box-sizing in all the elements of the page*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  border: 0;
+  overflow: hidden; /*  Disable scrollbars */
+  display: block; /* No floating content on sides */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
+}
+html * {
+  z-index: 2;
+}
+
+/*Hamburger*/
+#menu-hamburger {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+}
+.bar {
+  border-bottom: black 5px solid;
+  width: 20px;
+  height: 5px;
+  display: block;
+  box-shadow: #784ba0 2px 2px;
+}
+.control {
+  display: inline-flex;
+  box-shadow: #784ba0 2px 2px;
+  padding: 10px;
+  border-radius: 20px;
+  text-shadow: 2px 2px 0 rgba(255, 0, 179, 0.945);
+  justify-content: center;
+  align-items: center;
+}
+textarea {
+  text-align: center;
+  border-style: none;
+  border-radius: 20px;
+  width: 80px;
+  height: 30px;
+  resize: none;
+  overflow: hidden;
+}
+#sliderGravity {
+  position: relative;
+}
+
+#gameCanvas {
+  position: absolute;
+  z-index: 1;
+}
+#auxiliaryCanvas {
+  position: absolute;
+  z-index: 0;
+  /*CSS gradient*/
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    0deg,
+    #ff3cac 0%,
+    #784ba0 30%,
+    #2b86c5 100%
+  );
+}
+span,
+legend,
+button {
+  font-family: "Retro-Gaming";
+  color: darkblue;
+}
+img, span{
+    padding: 0 5px;    
+}
+button{
+    background-color: #ff3cac;
+    border-radius: 10px;
+}
+img{
+    max-height: 30px;
+}
+fieldset {
+  display: inline-block;
+  box-shadow: #784ba0 2px 2px;
+}
+#container {
+  position: absolute;
+  top: 35px;
+  left: 0;
+}
+#text {
+  position: relative;
+  top: 0;
+  left: 100;
+}
+
+/*CSS toggle*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/*Rounded sliders*/
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  span{
+    font-size: 11px;
+  }
+  textarea{
+    width: 45px;
+    height: 20px;
+  }
+  .control{
+    padding: 2px;
+  }
+}
